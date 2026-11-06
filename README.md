@@ -38,7 +38,9 @@ The estimate page omits the fixed mobile action bar so it cannot cover the form 
 
 ## Publish and rollback
 
-Deployment configuration and release approval are managed by the coordinator. The standard deployment command is `pnpm exec wrangler deploy`; Cloudflare's scoped GitHub integration may run it after the configured build. Do not publish an unreviewed production branch. Preserve unrelated DNS and email records. Verify the real domain, HTTPS, links and form after publication.
+The production host is **Cloudflare Pages**, project `j-m-removal`, connected to this repository's `main` branch through the existing Cloudflare GitHub app. Cloudflare runs `pnpm run build` and publishes only `dist/`. New approved commits on `main` trigger automatic builds; other branches can provide previews. The Pages integration does not require a custom build API token. Do not publish an unreviewed production branch. Preserve unrelated DNS and email records. Verify the real domain, HTTPS, links and form after publication.
+
+Use `pnpm run preview` for a local Pages preview. Normal releases use the GitHub integration. `pnpm run deploy` is an optional manual Pages deployment command and requires separately configured Pages-authorized credentials; it is not part of routine maintenance. The Wrangler configuration contains no database, storage or server-function bindings. Do not use `wrangler deploy`, which targets a different Cloudflare hosting product.
 
 For rollback, restore the known-good Cloudflare deployment **and** revert/fix the corresponding Git commit so the next build cannot restore the bad version. Record the release commit/version and actual live checks in the coordinator's release evidence. The source files alone do not prove deployment.
 
