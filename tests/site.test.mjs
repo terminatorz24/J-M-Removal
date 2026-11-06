@@ -43,7 +43,8 @@ test('estimate uses only the existing Tally form and an always-visible fallback'
   assert.ok(html.includes('id="tally-embed" data-tally-base="https://tally.so/embed/QoMoPA"'));
   assert.equal((html.match(/data-tally-link href="https:\/\/tally.so\/r\/QoMoPA"/g)||[]).length,2);
   assert.ok(!html.includes('class="mobile-action-bar"'));
-  assert.ok(html.includes('<noscript><iframe'));
+  assert.equal((html.match(/<iframe\b/g)||[]).length,1);
+  assert.ok(attrs(html,'src').some(src=>new URL(src,'https://jandmremoval.com').pathname==='/embed/QoMoPA'));
   assert.ok(!html.includes('widgets/embed.js'));
   assert.ok(!/<form\b/.test(html));
 });
