@@ -43,7 +43,12 @@ if(typeof document!=='undefined'){
       // The HTML frame works without JavaScript. Only change its URL for allowed campaign labels.
       // Do not load embed.js: it forwards all page parameters.
       const destination=destinationWithCampaign(url.href,window.location.href);
-      if(iframe&&iframe.src!==destination)iframe.src=destination;
+      if(iframe&&iframe.src!==destination){
+        // Avoid interrupting the browser's initial frame navigation while it is still starting.
+        const applyCampaign=()=>{iframe.src=destination;};
+        if(document.readyState==='complete')applyCampaign();
+        else window.addEventListener('load',applyCampaign,{once:true});
+      }
     }
   }
 }
