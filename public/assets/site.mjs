@@ -40,7 +40,7 @@ if(typeof document!=='undefined'){
     if(url.origin==='https://tally.so'&&url.pathname==='/embed/QoMoPA'){
       url.searchParams.set('alignLeft','1');url.searchParams.set('hideTitle','1');url.searchParams.set('transparentBackground','1');
       const iframe=document.createElement('iframe');
-      iframe.className='tally-frame';iframe.title='J&M Removal — Free estimate request';iframe.width='100%';iframe.height='2300';iframe.referrerPolicy='no-referrer';
+      iframe.className='tally-frame';iframe.title='J&M Removal — Free estimate request';iframe.width='100%';iframe.height='2300';iframe.referrerPolicy='strict-origin-when-cross-origin';
       // Set the filtered URL before insertion. Do not load embed.js: it forwards all page parameters.
       iframe.src=destinationWithCampaign(url.href,window.location.href);
       holder.append(iframe);
