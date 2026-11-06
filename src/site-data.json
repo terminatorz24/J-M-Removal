@@ -1,0 +1,66 @@
+{
+  "name": "J&M Removal",
+  "tagline": "Hauling Junk, Chasing Degrees",
+  "origin": "https://jandmremoval.com",
+  "phone": "832-670-8888",
+  "phoneHref": "tel:+18326708888",
+  "smsHref": "sms:+18326708888",
+  "email": "jmremovalhtx@gmail.com",
+  "instagram": "https://www.instagram.com/jmremovalhtx/",
+  "tally": "https://tally.so/r/QoMoPA",
+  "tallyEmbed": "https://tally.so/embed/QoMoPA",
+  "areas": [
+    {
+      "name": "Third Ward / MacGregor",
+      "note": "First focus"
+    },
+    {
+      "name": "Greater Eastwood",
+      "note": "First focus"
+    },
+    {
+      "name": "Wider Houston",
+      "note": "By request"
+    }
+  ],
+  "services": [
+    {
+      "slug": "junk-removal",
+      "title": "Junk removal",
+      "image": "junk-removal.png",
+      "imageAlt": "Illustration of a sofa and box for junk removal."
+    },
+    {
+      "slug": "loading-unloading",
+      "title": "Loading & unloading",
+      "image": "loading-unloading.png",
+      "imageAlt": "Illustration of boxes and a hand dolly for loading and unloading help."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How much will my job cost?",
+      "answer": "Every job gets an individual quote. The estimate reflects the items, access, crew effort, travel and any disposal needs. Your photo/video estimate is free and no-obligation; the owner confirms the final price before booking."
+    },
+    {
+      "question": "Do I need photos to request an estimate?",
+      "answer": "No—photos are optional when you first inquire. Clear photos of the items and access route help us assess the job, and we may ask for them before quoting. Do not move anything you cannot handle safely just to take a photo."
+    },
+    {
+      "question": "Can I send a video or a larger file?",
+      "answer": "Each form upload must be 10 MB or smaller. If a file will not upload, submit the request without it and email <a href=\"mailto:{{email}}\">{{email}}</a> with your name and neighborhood, or call/text <a href=\"{{phoneHref}}\">{{phone}}</a> for help."
+    },
+    {
+      "question": "Can you help with stairs or heavy items?",
+      "answer": "Send useful dimensions and photos of the items, doorways, stairs and landings. We review fit, access, handling, equipment and actual crew availability before accepting the job. Please flag fragile or unusual items too."
+    },
+    {
+      "question": "Does loading help include transportation?",
+      "answer": "Our current offer is loading and unloading labor only. You arrange the vehicle and transportation. Transporting your belongings is not part of our current service."
+    },
+    {
+      "question": "Does the form confirm my appointment?",
+      "answer": "No. Send your preferred date or time window, and we’ll review it with the job details. The owner confirms the final scope, price and availability before a booking is agreed."
+    }
+  ]
+}
