@@ -11,7 +11,7 @@ const escape=value=>String(value).replaceAll('&','&amp;').replaceAll('"','&quot;
 const facts={...data,year:new Date().getUTCFullYear()};
 function render(text,values=facts){return text.replace(/\{\{(\w+)\}\}/g,(_,key)=>{if(!(key in values))throw new Error(`Unknown template value: ${key}`);return String(values[key]);});}
 const faqItems=data.faqs.map((faq,index)=>`<details${index===0?' open':''}><summary>${faq.question}</summary><p>${render(faq.answer)}</p></details>`).join('\n');
-const areaRows=data.areas.map(area=>`<div class="area-row"><h3>${escape(area.name)}</h3><span>${escape(area.note)}</span></div>`).join('\n');
+const areaRows=data.areas.map(area=>`<div class="area-row"><h3>${escape(area.name)}</h3>${area.note?`<span>${escape(area.note)}</span>`:''}</div>`).join('\n');
 const pages=[
   {route:'/',file:'home.html',title:'Houston Junk Removal & Loading Help | J&M Removal',description:'J&M Removal offers junk removal and loading/unloading labor in Houston. Run by University of Houston students. Request a free photo/video estimate.'},
   {route:'/junk-removal/',file:'junk-removal.html',title:'Junk Removal in Houston | J&M Removal',description:'Request a free estimate for unwanted furniture, household items and clutter. We review the items, access and eligible destination before confirming your job.'},

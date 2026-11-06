@@ -11,16 +11,8 @@
   "tallyEmbed": "https://tally.so/embed/QoMoPA",
   "areas": [
     {
-      "name": "Third Ward / MacGregor",
-      "note": "First focus"
-    },
-    {
-      "name": "Greater Eastwood",
-      "note": "First focus"
-    },
-    {
-      "name": "Wider Houston",
-      "note": "By request"
+      "name": "Greater Houston area",
+      "note": ""
     }
   ],
   "services": [
